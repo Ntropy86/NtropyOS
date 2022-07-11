@@ -4,4 +4,6 @@ node_modules
 out
 public
 scripts
-*.config.js
+
+/*.config.js
+/*.setup.js
