@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+	body {
+		@apply text-white !w-screen  !h-screen  font-["-apple-system","poppins"];
+	}
+
+	a {
+		@apply active:!bg-[#ffffff]/20   focus:!bg-[#ffffff]/20;
+	}
+}
+@layer components {
+	.filter-white {
+		filter: invert(93%) sepia(91%) saturate(32%) hue-rotate(336deg)
+			brightness(107%) contrast(99%);
+	}
+
+	.navbar {
+		@apply !p-0  !min-h-[4px]  !bg-[#141414]/20 backdrop-blur-lg text-sm leading-[4px];
+	}
+}
