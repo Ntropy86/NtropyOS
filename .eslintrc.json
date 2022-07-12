@@ -42,6 +42,7 @@
     "unused-imports"
   ],
   "rules": {
+    "semi": ["error", "always"],
     "@next/next/no-img-element": "off",
 
     "@typescript-eslint/consistent-indexed-object-style": "error",
