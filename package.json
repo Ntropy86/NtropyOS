@@ -8,7 +8,8 @@
     "stylelint": "stylelint **/*.css",
     "prepare": "husky install",
     "test": "jest",
-    "testmon": "jest --watch"
+    "testmon": "jest --watch",
+    "prettier": "prettier --write ."
   },
   "dependencies": {
     "next": "latest",
