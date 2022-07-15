@@ -1,12 +1,12 @@
 // import HelloWorld from "components/apps/HelloWorld";
-import WindowManager from "components/system/WindowManager";
+import ProcessLoader from "components/system/ProcessLoader";
 import { ProcessProvider } from "contexts/process";
 import type { NextPage } from "next";
 
 const Home: NextPage = () => {
   return (
     <ProcessProvider>
-      <WindowManager />
+      <ProcessLoader />
     </ProcessProvider>
   );
 };
