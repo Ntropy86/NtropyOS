@@ -9,7 +9,8 @@
     "prepare": "husky install",
     "test": "jest",
     "testmon": "jest --watch",
-    "prettier": "prettier --write ."
+    "prettier": "prettier --write .",
+    "lint": "eslint --fix --ext .ts,.tsx ."
   },
   "dependencies": {
     "next": "latest",
@@ -30,6 +31,7 @@
     "babel-plugin-dynamic-import-node": "^2.3.3",
     "eslint": "^8.19.0",
     "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^17.0.0",
     "eslint-config-next": "^12.2.2",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
@@ -42,6 +44,7 @@
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "eslint-plugin-sonarjs": "^0.13.0",
     "eslint-plugin-sort-keys-fix": "^1.1.2",
+    "eslint-plugin-testing-library": "^5.5.1",
     "eslint-plugin-typescript-sort-keys": "^2.1.0",
     "eslint-plugin-unicorn": "^43.0.1",
     "eslint-plugin-unused-imports": "^2.0.0",

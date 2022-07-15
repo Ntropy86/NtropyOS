@@ -1,19 +1,28 @@
+/* eslint-disable react/jsx-no-constructed-context-values */
 import type { FC } from "react";
+import { createContext, useState } from "react";
+import type { Processes } from "utils/processDirectory";
 import processDirectory from "utils/processDirectory";
-// const ProcessContext = createContext({});
 
-// <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
-//         <h1 className="text-black text-5xl text-center">Hello World</h1>
-//       </main>
+interface Props {
+  children: React.ReactNode;
+}
 
-const ProcessLoader: FC = () => {
+type ProcessContextState = {
+  processes: Processes;
+};
+
+const ProcessContext = createContext<ProcessContextState>({ processes: {} });
+
+export const ProcessProvider: FC<Props> = ({ children }) => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars, unused-imports/no-unused-vars
+  const [processes, setProcesses] = useState(processDirectory);
+
   return (
-    <>
-      {Object.entries(processDirectory).map(([id, { Component }]) => (
-        <Component key={id} />
-      ))}
-    </>
+    <ProcessContext.Provider value={{ processes }}>
+      {children}
+    </ProcessContext.Provider>
   );
 };
 
-export default ProcessLoader;
+export const ProcessConsumer = ProcessContext.Consumer;
