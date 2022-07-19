@@ -4,10 +4,6 @@ import Metadata from "components/pages/Metadata";
 const HelloWorld = () => {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center py-2">
-      {/* <Head>
-        <title>Home - OS</title>
-        <link href="/favicon.ico" rel="icon" />
-      </Head> */}
       <Metadata description="Home" title="Neat - OS" />
 
       <main>
